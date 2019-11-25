@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/BtnBack"
+        android:layout_width="32dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/backarrow"
+        app:layout_constraintEnd_toStartOf="@+id/BtnShuffleOff"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtnShuffleOff"
+        android:layout_width="29dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/shuffleoff"
+        app:layout_constraintEnd_toStartOf="@+id/BtnAddPlaylist"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtnShuffleOn"
+        android:layout_width="29dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/shuffleon"
+        app:layout_constraintEnd_toStartOf="@+id/BtnAddPlaylist"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtnAddPlaylist"
+        android:layout_width="29dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/ic_playlist_add_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/BtnNotFav"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtnNotFav"
+        android:layout_width="29dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/notfavorite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtnFav"
+        android:layout_width="29dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/ic_favorite_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="303dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnShuffleOff"
+        app:srcCompat="@drawable/applemusiclogo" />
+
+    <TextView
+        android:id="@+id/TxtSongName"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Song Name"
+        android:singleLine="true"
+
+        android:textColor="#020202"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <SeekBar
+        android:id="@+id/SeekBar"
+        android:layout_width="260dp"
+        android:layout_height="15dp"
+
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtSongName" />
+
+    <TextView
+        android:id="@+id/TxtDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:text="0:00"
+        app:layout_constraintBottom_toTopOf="@+id/BtnPlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SeekBar"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <TextView
+        android:id="@+id/TxtLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:text="0:00"
+        app:layout_constraintBottom_toTopOf="@+id/BtnPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SeekBar"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <Button
+        android:id="@+id/BtnPause"
+        android:layout_width="81dp"
+        android:layout_height="89dp"
+        android:background="@drawable/ic_pause_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BtnNext"
+        app:layout_constraintStart_toEndOf="@+id/BtnPrev"
+        app:layout_constraintTop_toBottomOf="@+id/SeekBar" />
+
+
+    <Button
+        android:id="@+id/BtnPlay"
+        android:layout_width="81dp"
+        android:layout_height="89dp"
+        android:background="@drawable/mainplay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BtnNext"
+        app:layout_constraintStart_toEndOf="@+id/BtnPrev"
+        app:layout_constraintTop_toBottomOf="@+id/SeekBar" />
+
+    <Button
+        android:id="@+id/BtnNext"
+        android:layout_width="59dp"
+        android:layout_height="45dp"
+
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/mainforward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BtnPlus10"
+        app:layout_constraintTop_toBottomOf="@+id/SeekBar" />
+
+    <Button
+        android:id="@+id/BtnPrev"
+        android:layout_width="59dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/ic_fast_rewind_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BtnMinusTen"
+        app:layout_constraintTop_toBottomOf="@+id/SeekBar" />
+
+    <Button
+        android:id="@+id/BtnMinusTen"
+        android:layout_width="35dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/minus10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SeekBar" />
+
+    <Button
+        android:id="@+id/BtnPlus10"
+        android:layout_width="35dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/plus10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SeekBar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
